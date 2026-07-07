@@ -1,7 +1,7 @@
 import "dotenv/config";
 import hardhatToolboxViemPlugin from "@nomicfoundation/hardhat-toolbox-viem";
-import { defineConfig } from "hardhat/config";
 import hardhatVerify from "@nomicfoundation/hardhat-verify";
+import { defineConfig } from "hardhat/config";
 
 const networks: Record<string, any> = {
   hardhatMainnet: {
@@ -23,11 +23,8 @@ if (process.env.SEPOLIA_RPC_URL && process.env.SEPOLIA_PRIVATE_KEY) {
   };
 }
 
-export default defineConfig({
-  plugins: [
-    hardhatToolboxViemPlugin,
-    hardhatVerify,
-],
+const config: Parameters<typeof defineConfig>[0] = {
+  plugins: [hardhatToolboxViemPlugin, hardhatVerify],
   solidity: {
     profiles: {
       default: {
@@ -45,10 +42,14 @@ export default defineConfig({
     },
   },
   networks,
+};
 
-  verify: {
+if (process.env.ETHERSCAN_API_KEY) {
+  config.verify = {
     etherscan: {
-        apiKey: process.env.ETHERSCAN_API_KEY,
+      apiKey: process.env.ETHERSCAN_API_KEY,
     },
-  },
-});
+  };
+}
+
+export default defineConfig(config);
