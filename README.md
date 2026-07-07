@@ -84,3 +84,29 @@ npx hardhat compile
 npx hardhat test
 
 npx hardhat ignition deploy ./ignition/modules/Counter.ts
+
+
+## Deployment
+
+**Network:** Ethereum Sepolia
+
+**Contract Address:**
+
+```
+0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+## Features
+
+- Increment counter
+- Increment by custom value
+- Decrement counter
+- Reset counter (Owner only)
+
+## Tech Stack
+
+- Solidity 0.8.28
+- Hardhat 3
+- Ignition
+- OpenZeppelin
+- TypeScript
