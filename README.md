@@ -84,7 +84,7 @@ test/
 |----------|---------|----------|
 | Counter | Sepolia | `0xb753818E252695376286d5921322ae5101191929` |
 | Adrian Token (ADR) | Sepolia | `0xbFDb434420ADFBF0Ca46b7a41B2CCF16AF092B22` |
-| Voting | Sepolia | Deploy after completion |
+| Voting | Sepolia | `0x03B404cB792924627c64Bac9bB576e6DBB99d7Dc` |
 
 ---
 
