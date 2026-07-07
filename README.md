@@ -1,4 +1,4 @@
-# Onchain Smart Contracts
+# Web3 Smart Contracts
 
 ![Solidity](https://img.shields.io/badge/Solidity-0.8.28-blue)
 
