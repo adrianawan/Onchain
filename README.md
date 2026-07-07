@@ -85,28 +85,89 @@ npx hardhat test
 
 npx hardhat ignition deploy ./ignition/modules/Counter.ts
 
+## Ethereum Sepolia
 
-## Deployment
+### Counter Contract
 
-**Network:** Ethereum Sepolia
+Address:
 
-**Contract Address:**
-
+```text
+0xb753818E252695376286d5921322ae5101191929
 ```
-0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Adrian Token (ADR)
+
+Address:
+
+```text
+0xbFDb434420ADFBF0Ca46b7a41B2CCF16AF092B22
 ```
 
-## Features
+---
 
-- Increment counter
-- Increment by custom value
-- Decrement counter
-- Reset counter (Owner only)
-
-## Tech Stack
+# Technology Stack
 
 - Solidity 0.8.28
 - Hardhat 3
-- Ignition
-- OpenZeppelin
 - TypeScript
+- Hardhat Ignition
+- OpenZeppelin Contracts
+- Viem
+- Ethereum Sepolia
+
+---
+
+# Project Structure
+
+```
+contracts/
+├── Counter.sol
+└── MyToken.sol
+
+ignition/
+└── modules/
+    ├── Counter.ts
+    └── MyToken.ts
+
+test/
+```
+
+---
+
+# Getting Started
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Compile contracts
+
+```bash
+npx hardhat compile
+```
+
+Run tests
+
+```bash
+npx hardhat test
+```
+
+Deploy Counter
+
+```bash
+npx hardhat ignition deploy ./ignition/modules/Counter.ts --network sepolia
+```
+
+Deploy ERC20 Token
+
+```bash
+npx hardhat ignition deploy ./ignition/modules/MyToken.ts --network sepolia
+```
+
+---
+
+# License
+
+MIT
